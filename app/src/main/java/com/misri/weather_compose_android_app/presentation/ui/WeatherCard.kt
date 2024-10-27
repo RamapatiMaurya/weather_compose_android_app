@@ -3,6 +3,7 @@ package com.misri.weather_compose_android_app.presentation.ui
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -14,7 +15,9 @@ import com.misri.weather_compose_android_app.domain.models.Weather
 fun WeatherCard(weather: Weather) {
     Card(
         modifier = Modifier.padding(8.dp),
-        elevation = 4.dp as CardElevation
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 4.dp
+        )
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text("Temperature: ${weather.temperature}°C")
