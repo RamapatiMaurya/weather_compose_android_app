@@ -26,19 +26,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             WeathercomposeandroidappTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
                     val viewModel: WeatherViewModel = hiltViewModel()
                     WeatherScreen(viewModel, modifier = Modifier.padding(innerPadding))
                 }
             }
         }
-//        setContent {
-//            val viewModel: WeatherViewModel = hiltViewModel()
-//            WeatherScreen(viewModel)
-//        }
     }
 }
 
